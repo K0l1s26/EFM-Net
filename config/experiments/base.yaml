@@ -26,5 +26,6 @@ resume: true
 
 roi_size: [128, 128, 128]
 sw_batch_size: 6
+overlap: 0.5
 
 device: "cuda:0"
