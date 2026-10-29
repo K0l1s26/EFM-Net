@@ -1,0 +1,30 @@
+
+model: "EFMNet"
+
+BraTS2023: "/media/c820/0A8AEC1D8AEC07531/kls/dataset/Brats2023/TrainingData/"
+BraTS2020: "/media/c820/0A8AEC1D8AEC07531/kls/dataset/Brats2020/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/"
+test_dir: "/media/c820/0A8AEC1D8AEC07531/kls/dataset/BratsSSA/ASNR-MICCAI-BraTS2023-SSA-Challenge-TrainingData_V2/"
+Dataset_name: "BraTS2023"
+run_name: " "
+test_inference: false
+n_splits: 5
+fold: 0
+num_workers: 4
+batch_size: 1
+input_size: [128, 128, 128]
+in_channels: 4
+num_classes: 3
+norm: "GROUP"    #  BATCH / INSTANCE / GROUP
+act: "PRELU"     #  RELU / LEAKY_RELU / PRELU / GELU
+SEED: 42
+epochs: 300
+lr: 0.0001
+weight_decay: 0.00001
+patience: 50
+val_every: 1
+resume: true
+
+roi_size: [128, 128, 128]
+sw_batch_size: 6
+
+device: "cuda:0"
