@@ -309,10 +309,6 @@ def main(cfg):
             model, train_loader, optimizer, criterion, dice_metric,
             post_sigmoid, post_pred, device, epoch, cfg.epochs
         )
-        train_loss = train_one_epoch(
-            model, train_loader, optimizer, criterion, dice_metric,
-            post_sigmoid, post_pred,device, epoch, cfg.epochs
-        )
         scheduler.step()
 
         history['train_loss'].append(train_loss)
